@@ -6,7 +6,7 @@ PImage soilImg;
 PImage soldierImg;
 
 //intSoldierRobotRazerMovement
-int sdX,sdY,rbX,rbY,rzX,rzY,rzXX;
+int sdX,sdY,rbX,rbY,rzX,rzY,rzLength,rzSpeed;
 
 
 void setup() {
@@ -25,7 +25,7 @@ void setup() {
  
 //razerStart
   rzX=rbX-25; //150,295,375,455
-  rzXX=rbX-45; //195,275,355,435
+  rzLength=-20; 
   rzY=rbY+37; //277,357,437,517
   
 
@@ -73,8 +73,8 @@ void draw() {
   
   //soldier
   image(soldierImg,sdX,sdY);
-  sdX +=3; //speed
-  sdX %=640; //solierLoop_0,1,2,3...640
+  sdX +=3; //soldierSpeed
+  sdX %=640; //soldierLoop_0,1,2,3...640
   
   //robot
   image(robotImg,rbX,rbY);
@@ -82,14 +82,16 @@ void draw() {
    //razer
    stroke(255,0,0);
    strokeWeight(10);
-   line(rzX,rzY,rzXX,rzY);
-   //razerSpeed
-   rzX-=2; //rzX=rbX-20-2;rbx-22,-24,-26...
-   rzXX-=2;//rzXX=rbX-40-2;rbx-42,-44,-46...
-   
-   //razerLoop(rbx-20)to(rbx-200)
-  //rzX=-(rzX%180)_0,-1,-2,-3,-4...
+   line(rzX,rzY,rzX-rzLength,rzY);
   
-
+   rzSpeed=-2; //razerSpeed
+   rzX+=rzSpeed;
+   
+   if(rzX==(rbX-25)-200)  //if_razerX_Arrived(-200)
+   {
+     rzX=rbX-25;    //razer_Return
+   }
+ 
 }
+
  
