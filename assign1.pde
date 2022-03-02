@@ -5,7 +5,7 @@ PImage robotImg;
 PImage soilImg;
 PImage soldierImg;
 
-//intSoldierRobotRazerMovement
+//int_Soldier_Robot_Razer
 int sdX,sdY,rbX,rbY,rzX,rzY,rzLength,rzSpeed;
 
 
