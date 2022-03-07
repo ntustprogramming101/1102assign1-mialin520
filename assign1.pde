@@ -69,7 +69,7 @@ void draw() {
   stroke(255,255,0);
   strokeWeight(5);
   fill(253,184,19);
-  circle(590,50,120);
+  ellipse(590,50,120,120);
   
   //soldier
   image(soldierImg,sdX,sdY);
@@ -87,7 +87,7 @@ void draw() {
    rzSpeed=-2; //razerSpeed
    rzX+=rzSpeed;
    
-   if(rzX==(rbX-25)-200)  //if_razerX_Arrived(-200)
+   if(rzX<=(rbX-25)-200)  //if_razerX_Arrived(-200)
    {
      rzX=rbX-25;    //razer_Return
    }
