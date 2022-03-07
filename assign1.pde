@@ -31,12 +31,12 @@ void setup() {
 
   
 //loadinImg  
-  bgImg=loadImage("groundhogimg/bg.jpg");
-  ghImg=loadImage("groundhogimg/groundhog.png");
-  lifeImg=loadImage("groundhogimg/life.png");
-  robotImg=loadImage("groundhogimg/robot.png");
-  soilImg=loadImage("groundhogimg/soil.png");
-  soldierImg=loadImage("groundhogimg/soldier.png");
+  bgImg=loadImage("img/bg.jpg");
+  ghImg=loadImage("img/groundhog.png");
+  lifeImg=loadImage("img/life.png");
+  robotImg=loadImage("img/robot.png");
+  soilImg=loadImage("img/soil.png");
+  soldierImg=loadImage("img/soldier.png");
 
 
 }
