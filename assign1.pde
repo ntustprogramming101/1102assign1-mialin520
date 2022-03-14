@@ -69,7 +69,7 @@ void draw() {
   stroke(255,255,0);
   strokeWeight(5);
   fill(253,184,19);
-  ellipse(590,50,120,120);
+  ellipse(590,50,125,125);
   
   //soldier
   image(soldierImg,sdX,sdY);
