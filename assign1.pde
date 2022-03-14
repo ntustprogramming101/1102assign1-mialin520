@@ -24,7 +24,7 @@ void setup() {
   rbX = floor(random(3,7))*80; //240,320,400,480
  
 //razerStart
-  rzX=rbX-25; //150,295,375,455
+  rzX=rbX+5; //150,295,375,455
   rzLength=-20; 
   rzY=rbY+37; //277,357,437,517
   
@@ -63,7 +63,7 @@ void draw() {
   image(lifeImg,150,10);
   
   //groundhog
-  image(ghImg,320,80);
+  image(ghImg,280,80);
   
   //Sun
   stroke(255,255,0);
@@ -74,7 +74,9 @@ void draw() {
   //soldier
   image(soldierImg,sdX,sdY);
   sdX +=3; //soldierSpeed
-  sdX %=640; //soldierLoop_0,1,2,3...640
+  if(sdX>=640){
+    sdX=-40;
+  }
   
   //robot
   image(robotImg,rbX,rbY);
@@ -87,9 +89,9 @@ void draw() {
    rzSpeed=-2; //razerSpeed
    rzX+=rzSpeed;
    
-   if(rzX<=(rbX-25)-200)  //if_razerX_Arrived(-200)
+   if(rzX<=rbX-195)  //if_razerX_Arrived(-200)
    {
-     rzX=rbX-25;    //razer_Return
+     rzX=rbX+5;    //razer_Return
    }
  
 }
